@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180810 16:08:40.822" generator="Rebot 3.0.2 (Python 2.7.6 on linux2)">
+<suite source="/media/nfs/APPoSBooks/projects/openfaas/functions/robot/tests" id="s1" name="Combined Validation Report">
+<suite source="/media/nfs/APPoSBooks/projects/openfaas/functions/robot/tests/interfaces.robot" id="s1-s1" name="Interfaces">
+<kw type="setup" name="Connect To Switches">
+<doc>Establish connection to a switch which gets used by test cases.</doc>
+<kw name="Connect To" library="AristaLibrary">
+<doc>This is the cornerstone of all testing. The Connect To</doc>
+<arguments>
+<arg>host=${SW1_HOST}</arg>
+<arg>transport=${TRANSPORT}</arg>
+<arg>username=${USERNAME}</arg>
+<arg>password=${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20180810 16:08:40.462" level="INFO">Created connection to https://daniel:****@SW1_HOST:443/command-api: model: vEOS, serial: , systemMAC: 00:50:56:b9:91:b6, version: 4.20.5.2F, lastBootTime: 1533825980.24</msg>
+<status status="PASS" endtime="20180810 16:08:40.462" starttime="20180810 16:08:40.202"></status>
+</kw>
+<kw name="Get Command Output" library="AristaLibrary.Expect">
+<doc>Execute the specified command on the named switch and store the</doc>
+<arguments>
+<arg>cmd=show ip interface</arg>
+</arguments>
+<status status="PASS" endtime="20180810 16:08:40.615" starttime="20180810 16:08:40.462"></status>
+</kw>
+<kw name="Expect" library="AristaLibrary.Expect">
+<doc>This keyword provides a method of testing various types of values</doc>
+<arguments>
+<arg>interfaces Ethernet1 interfaceStatus</arg>
+<arg>to be</arg>
+<arg>connected</arg>
+</arguments>
+<status status="PASS" endtime="20180810 16:08:40.616" starttime="20180810 16:08:40.616"></status>
+</kw>
+<status status="PASS" endtime="20180810 16:08:40.616" starttime="20180810 16:08:40.201"></status>
+</kw>
+<kw type="teardown" name="Clear All Connections" library="AristaLibrary">
+<doc>Remove all connection objects from the cache and resets the list of</doc>
+<status status="PASS" endtime="20180810 16:08:40.772" starttime="20180810 16:08:40.772"></status>
+</kw>
+<test id="s1-s1-t1" name="show ip interfaces">
+<kw name="Record Output" library="AristaLibrary.Expect">
+<doc>Log the provided command. If no command is provided then log the</doc>
+<arguments>
+<arg>cmd=show ip interface</arg>
+</arguments>
+<msg timestamp="20180810 16:08:40.771" level="INFO">Ethernet1 is up, line protocol is up (connected)
+  Internet address is 1.3.4.5/30
+  Broadcast address is 255.255.255.255
+  IPv6 Interface Forwarding : None
+  Proxy-ARP is disabled
+  Local Proxy-ARP is disabled
+  Gratuitous ARP is ignored
+  IP MTU 1500 bytes
+Loopback0 is up, line protocol is up (connected)
+  Description: BGP router-Id
+  Internet address is 172.19.32.3/32
+  Broadcast address is 255.255.255.255
+  IPv6 Interface Forwarding : None
+  Proxy-ARP is disabled
+  Local Proxy-ARP is disabled
+  Gratuitous ARP is ignored
+  IP MTU 65535 bytes
+Loopback1 is up, line protocol is up (connected)
+  Description: Vxlan Virtual VTEP
+  Internet address is 172.19.33.2/32
+  Secondary address is 172.19.33.0/32
+  Broadcast address is 255.255.255.255
+  IPv6 Interface Forwarding : None
+  Proxy-ARP is disabled
+  Local Proxy-ARP is disabled
+  Gratuitous ARP is ignored
+  IP MTU 65535 bytes
+Management1 is up, line protocol is up (connected)
+  Internet address is 10.20.30.157/24
+  Broadcast address is 255.255.255.255
+  IPv6 Interface Forwarding : None
+  Proxy-ARP is disabled
+  Local Proxy-ARP is disabled
+  Gratuitous ARP is ignored
+  IP MTU 1500 bytes
+Vlan100 is up, line protocol is up (connected)
+  Description: SERVER NETWORK
+  Internet address is virtual 2.2.2.1/24
+  Broadcast address is 255.255.255.255
+  IPv6 Interface Forwarding : None
+  Proxy-ARP is disabled
+  Local Proxy-ARP is disabled
+  Gratuitous ARP is ignored
+  IP MTU 9000 bytes
+</msg>
+<status status="PASS" endtime="20180810 16:08:40.771" starttime="20180810 16:08:40.617"></status>
+</kw>
+<status status="PASS" endtime="20180810 16:08:40.771" critical="yes" starttime="20180810 16:08:40.616"></status>
+</test>
+<doc>This is a test that will check to see if interfaces are in the up up state.
+The test reverts the neighbor statement to it's proper state.</doc>
+<status status="PASS" endtime="20180810 16:08:40.772" starttime="20180810 16:08:40.178"></status>
+</suite>
+<metadata>
+<item name="Author">EOS+ Consulting Services</item>
+</metadata>
+<status status="PASS" endtime="20180810 16:08:40.773" starttime="20180810 16:08:40.158"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat info="non-critical" fail="0" pass="0">new</stat>
+<stat info="non-critical" fail="0" pass="0">not_enabled</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Combined Validation Report" pass="1">Combined Validation Report</stat>
+<stat fail="0" id="s1-s1" name="Interfaces" pass="1">Combined Validation Report.Interfaces</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

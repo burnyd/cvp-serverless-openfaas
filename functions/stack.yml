@@ -1,0 +1,24 @@
+provider:
+  name: faas
+  gateway: http://10.20.30.147:31112
+
+functions:
+  slack-update:
+    lang: python
+    handler: ./slack-update/
+    image: arista.local:5000/slack-update:latest
+    environment:
+      token: #https://hooks.slack.com/services/ slack token 
+
+  ingress:
+    lang: python
+    handler: ./ingress/
+    image: arista.local:5000/ingress:latest
+
+  robot:
+    lang: Dockerfile
+    handler: ./robot/
+    image: arista.local:5000/robot:latest
+    environment:
+      token: #https://hooks.slack.com/services/ slack token
+

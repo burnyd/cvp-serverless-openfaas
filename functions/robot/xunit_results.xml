@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0" tests="1" errors="0" name="Run Full Suite" skip="0">
+<testcase classname="Run Full Suite.Interfaces" name="show ip interfaces" time="0">
+</testcase>
+</testsuite>

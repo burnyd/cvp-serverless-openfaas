@@ -1,0 +1,23 @@
+==============================================================================
+Run Full Suite                                                                
+==============================================================================
+Run Full Suite.Interfaces :: This is a test that will check to see if inter...
+==============================================================================
+show ip interfaces                                                    | PASS |
+------------------------------------------------------------------------------
+Run Full Suite.Interfaces :: This is a test that will check to see... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Run Full Suite                                                        | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  /media/nfs/APPoSBooks/projects/openfaas/functions/robot/output.xml
+XUnit:   /media/nfs/APPoSBooks/projects/openfaas/functions/robot/xunit_results.xml
+Log:     /media/nfs/APPoSBooks/projects/openfaas/functions/robot/log.html
+Report:  /media/nfs/APPoSBooks/projects/openfaas/functions/robot/report.html
+['./output.xml']
+Output:  /media/nfs/APPoSBooks/projects/openfaas/functions/robot/output.xml
+Log:     /media/nfs/APPoSBooks/projects/openfaas/functions/robot/log.html
+Report:  /media/nfs/APPoSBooks/projects/openfaas/functions/robot/report.html
